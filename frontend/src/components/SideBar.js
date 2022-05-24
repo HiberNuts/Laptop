@@ -13,6 +13,7 @@ import { NavLink } from "react-router-dom";
 
 const Container = styled.div`
   position: fixed;
+ 
 
   .active {
     border-right: 4px solid var(--white);
@@ -61,7 +62,7 @@ const Button = styled.button`
 
 const SidebarContainer = styled.div`
   background-color: var(--black);
-  width: 3.5rem;
+  width: 3.6rem;
   height: 80vh;
   margin-top: 1rem;
   border-radius: 0 30px 30px 0;
@@ -122,8 +123,8 @@ const Item = styled(NavLink)`
   }
 
   img {
-    width: 1.2rem;
-    height: auto;
+    width: 1.4rem;
+    height: 1.4rem;
     filter: invert(92%) sepia(4%) saturate(1033%) hue-rotate(169deg) brightness(78%) contrast(85%);
   }
 `;
