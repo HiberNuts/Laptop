@@ -9,7 +9,7 @@ import { Route, Routes } from "react-router-dom";
 import LoginForm from "./components/LoginForm";
 import RegisterForm from "./components/RegisterForm";
 import Home from "./pages/Home";
-import Side from "./pages/Side";
+import SideBar from "./components/SideBar";
 
 function App() {
   let navigate = useNavigate();
@@ -29,7 +29,7 @@ function App() {
     <div className="App">
       <>
         <ToastContainer />
-        <Side />
+        <SideBar />
         <Routes>
           <Route exact path="/register" element={<RegisterForm />} />
           <Route exact path="/login" element={<LoginForm />} />
