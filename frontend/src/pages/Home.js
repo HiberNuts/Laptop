@@ -10,6 +10,7 @@ const Home = () => {
       navigate("/home");
     }
 
+    
     if (!authToken) {
       navigate("/login");
     }
