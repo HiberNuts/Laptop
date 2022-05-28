@@ -9,7 +9,6 @@ const Home = () => {
     if (authToken) {
       navigate("/home");
     }
-
     
     if (!authToken) {
       navigate("/login");
