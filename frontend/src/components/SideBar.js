@@ -13,8 +13,6 @@ import { NavLink } from "react-router-dom";
 
 const Container = styled.div`
   position: fixed;
- 
-
   .active {
     border-right: 4px solid var(--white);
 
@@ -22,6 +20,13 @@ const Container = styled.div`
       filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
     }
   }
+  margin-right: 10px;
+  height: 100%;
+  display: flex;
+  margin-top: -39px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 `;
 
 const Button = styled.button`
@@ -63,7 +68,7 @@ const Button = styled.button`
 const SidebarContainer = styled.div`
   background-color: var(--black);
   width: 3.6rem;
-  height: 80vh;
+  height: 50vh;
   margin-top: 1rem;
   border-radius: 0 30px 30px 0;
   padding: 1rem 0;
@@ -228,33 +233,37 @@ const SideBar = () => {
         Click
       </Button>
       <SidebarContainer>
-        <Logo>
+        {/* <Logo>
           <img src={logo} alt="logo" />
-        </Logo>
+        </Logo> */}
         <SlickBar clicked={click}>
           <Item onClick={() => setClick(false)} exact activeClassName="active" to="/">
-            <img src={Home} alt="Home" />
-            <Text clicked={click}>Home</Text>
+            <img src={Home} alt="DashBoard" />
+            <Text clicked={click}>DashBoard</Text>
           </Item>
-          <Item onClick={() => setClick(false)} activeClassName="active" to="/team">
-            <img src={Team} alt="Team" />
-            <Text clicked={click}>Team</Text>
+          <Item onClick={() => setClick(false)} activeClassName="active" to="/newreq">
+            <img src={Team} alt="New Requests" />
+            <Text clicked={click}>New Requests</Text>
           </Item>
-          <Item onClick={() => setClick(false)} activeClassName="active" to="/calender">
-            <img src={Calender} alt="Calender" />
-            <Text clicked={click}>Calender</Text>
+          <Item onClick={() => setClick(false)} activeClassName="active" to="/comreq">
+            <img src={Calender} alt="Completed Beneficiaries" />
+            <Text clicked={click}>
+              Completed <br /> Beneficiaries
+            </Text>
           </Item>
-          <Item onClick={() => setClick(false)} activeClassName="active" to="/documents">
-            <img src={Documents} alt="Documents" />
-            <Text clicked={click}>Documents</Text>
+          <Item onClick={() => setClick(false)} activeClassName="active" to="/activereq">
+            <img src={Documents} alt="Active Beneficaries" />
+            <Text clicked={click}>
+              Active <br /> Beneficaries
+            </Text>
           </Item>
-          <Item onClick={() => setClick(false)} activeClassName="active" to="/projects">
+          {/* <Item onClick={() => setClick(false)} activeClassName="active" to="/projects">
             <img src={Projects} alt="Projects" />
             <Text clicked={click}>Projects</Text>
-          </Item>
+          </Item> */}
         </SlickBar>
 
-        <Profile clicked={profileClick}>
+        {/* <Profile clicked={profileClick}>
           <img onClick={() => handleProfileClick()} src="https://picsum.photos/200" alt="Profile" />
           <Details clicked={profileClick}>
             <Name>
@@ -266,7 +275,7 @@ const SideBar = () => {
               <img src={PowerOff} alt="logout" />
             </Logout>
           </Details>
-        </Profile>
+        </Profile> */}
       </SidebarContainer>
     </Container>
   );

@@ -10,6 +10,10 @@ import LoginForm from "./components/LoginForm";
 import RegisterForm from "./components/RegisterForm";
 import Home from "./pages/Home";
 import SideBar from "./components/SideBar";
+import Dash from "./pages/Dash";
+import NewReq from "./pages/NewReq";
+import ComReq from "./pages/ComReq";
+import ActiveReq from "./pages/ActiveReq";
 
 function App() {
   let navigate = useNavigate();
@@ -30,10 +34,11 @@ function App() {
       <>
         <ToastContainer />
         <SideBar />
-        <Routes>
-          <Route exact path="/register" element={<RegisterForm />} />
-          <Route exact path="/login" element={<LoginForm />} />
-          <Route exact path="/home" element={<Home />} />
+        <Routes style={{ marginRight: "20px" }}>
+          <Route exact path="/" element={<Dash />} />
+          <Route exact path="/newreq" element={<NewReq />} />
+          <Route exact path="/comreq" element={<ComReq />} />
+          <Route exact path="/activereq" element={<ActiveReq />} />
         </Routes>
       </>
     </div>
